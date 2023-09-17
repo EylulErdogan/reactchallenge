@@ -112,7 +112,7 @@ export default function PostDetail() {
           <h2>Yorumlar</h2>
           <div>
             <ul>
-              {comments.map((comment) => (
+              {comments?.map((comment) => (
                 <ul key={comment.id}>
                   <li>
                     <div style={{fontSize:"18px", fontWeight:700}}>{comment.name}</div>
