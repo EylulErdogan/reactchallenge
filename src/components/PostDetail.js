@@ -28,7 +28,6 @@ export default function PostDetail() {
         console.error(err);
       });
 
-
     axios
       .get(`${apiUrl}/posts/${params.id}/comments`)
       .then((res) => {
@@ -110,16 +109,18 @@ export default function PostDetail() {
         </div>
         <div style={{ width: "40%" }}>
           <h2>Yorumlar</h2>
-          <div>
+          <div >
             <ul>
               {comments?.map((comment) => (
-                <ul key={comment.id}>
-                  <li>
-                    <div style={{fontSize:"18px", fontWeight:700}}>{comment.name}</div>
-                    <div style={{fontSize:"16px"}}>{comment.body}</div>
-                    <div style={{fontSize:"12px"}}>{comment.email}</div>
-                  </li>
-                </ul>
+                <li key={comment.id} >
+                  <div className="comment-frame">
+                    <div style={{ fontSize: "18px", fontWeight: 700 }}>
+                     {comment.name}
+                    </div>
+                    <div style={{ fontSize: "16px" }}>{comment.body}</div>
+                    <div style={{ fontSize: "12px" }}><b>E-mail:</b>{comment.email}</div>
+                  </div>
+                </li>
               ))}
             </ul>
           </div>
