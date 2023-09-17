@@ -109,16 +109,19 @@ export default function PostDetail() {
         </div>
         <div style={{ width: "40%" }}>
           <h2>Yorumlar</h2>
-          <div >
+          <div>
             <ul>
               {comments?.map((comment) => (
-                <li key={comment.id} >
+                <li key={comment.id}>
                   <div className="comment-frame">
                     <div style={{ fontSize: "18px", fontWeight: 700 }}>
-                     {comment.name}
+                      {comment.name}
                     </div>
                     <div style={{ fontSize: "16px" }}>{comment.body}</div>
-                    <div style={{ fontSize: "12px" }}><b>E-mail:</b>{comment.email}</div>
+                    <div style={{ fontSize: "12px" }}>
+                      <b>E-mail:</b>
+                      {comment.email}
+                    </div>
                   </div>
                 </li>
               ))}

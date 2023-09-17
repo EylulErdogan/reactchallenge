@@ -22,16 +22,14 @@ function App() {
   }, []);
 
   return (
-    <div>   
-      
-    <Navbar/>
+    <div>
+      <Navbar />
       <div className="container" style={{ display: "flex", flexWrap: "wrap" }}>
-      {posts?.map(post => (
-        <Card key={post.id} item={post}/>
-      ))}
+        {posts?.map((post) => (
+          <Card key={post.id} item={post} />
+        ))}
+      </div>
     </div>
-    </div>
-    
   );
 }
 
